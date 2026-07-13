@@ -1,1 +1,152 @@
-lab04 created
+# Lab 4: Familiarization with Sensors, Actuators, and Embedded Systems
+
+## Title
+**Familiarization with Sensors, Actuators, and Embedded Systems**
+
+## Objectives
+- Understand the basic architecture of embedded systems used in IoT.  
+- Become familiar with commonly used sensors and actuators.  
+- Identify the features, functions, and pin configuration of the Raspberry Pi.  
+- Identify the features, functions, and pin configuration of the ESP32.  
+- Identify the features, functions, and pin configuration of the ESP8266.  
+- Identify the features, functions, and pin configuration of the Arduino Uno.  
+
+---
+
+## Introduction
+An embedded system is a combination of hardware and software designed to perform a specific, dedicated function within a larger system. In IoT, embedded systems form the "brain" of every smart device: a microcontroller or single-board computer receives input from sensors, processes the information according to programmed logic, and produces output through actuators or network communication.
+
+> "Basic Embedded IoT Data Flow: Sensor (Input) → Microcontroller/Microprocessor (Processing) → Actuator / Network (Output)"  
+> "An embedded system combines a processor (microcontroller or microprocessor), memory, input/output interfaces, and firmware to carry out a defined task."
+
+---
+
+## Background Theory
+
+### Embedded Systems
+Embedded systems combine a processor (microcontroller or microprocessor), memory, I/O interfaces, and firmware to perform dedicated tasks. Key characteristics include:
+- **Real-time operation**: Many embedded systems must respond within strict timing constraints.  
+- **Dedicated functionality**: Built for a specific purpose rather than general computing.  
+- **Resource constraints**: Limited processing power, memory, and power supply.  
+- **Reliability**: Expected to run continuously, often unattended.
+
+Embedded IoT devices typically fall into two categories:
+- **Microcontroller-based boards** (Arduino Uno, ESP32, ESP8266): run a single program in a loop and directly control GPIO pins.  
+- **Microprocessor-based boards** (Raspberry Pi): run a full OS (e.g., Raspberry Pi OS) and can multitask for heavier computation.
+
+### Microcontrollers and Microprocessors for IoT
+
+#### A. Raspberry Pi (Raspberry Pi 4 Model B)
+**Use case:** Edge computing, local dashboards, camera-based systems.  
+**Key specifications:**
+- Processor: Broadcom BCM2711, Quad-core Cortex-A72 @ 1.5 GHz  
+- RAM: 2 GB / 4 GB / 8 GB LPDDR4  
+- Connectivity: Dual-band Wi‑Fi, Bluetooth 5.0, Gigabit Ethernet  
+- USB: 2× USB 3.0, 2× USB 2.0  
+- Display: 2× Micro-HDMI (dual 4K)  
+- GPIO: 40-pin header (26 general-purpose usable GPIO)  
+- Power: USB Type-C  
+**Notes:** All GPIO pins operate at **3.3V logic**; connecting 5V directly can damage the board.
+
+#### B. ESP32
+**Use case:** Wireless sensor nodes with higher processing and I/O needs.  
+**Key specifications:**
+- Processor: Dual-core Xtensa LX6 @ up to 240 MHz  
+- Connectivity: Wi‑Fi + Bluetooth (Classic + BLE)  
+- GPIO: Up to ~34 usable GPIO pins  
+- ADC: 2× 12-bit ADC (up to 18 channels)  
+- DAC: 2× 8-bit DAC (GPIO25, GPIO26)  
+- PWM: 16 LEDC channels  
+- Operating voltage: 3.3V  
+**Notes:** Many peripheral functions can be reassigned to different GPIOs via pin multiplexing.
+
+#### C. ESP8266 (NodeMCU / ESP-12E)
+**Use case:** Simple, low-cost Wi‑Fi sensor nodes.  
+**Key specifications:**
+- Processor: Tensilica L106 32-bit RISC @ 80–160 MHz  
+- Connectivity: Wi‑Fi only  
+- RAM/Flash: ~128 KB RAM, 4 MB Flash (typical module)  
+- GPIO: ~11 recommended usable pins  
+- Analog input: 1 pin (A0, 0–3.3V)  
+- Operating voltage: 3.3V  
+**Notes:** Silkscreen labels (D0–D8) differ from raw GPIO numbers; some pins are tied to flash and must not be used.
+
+#### D. Arduino Uno (R3)
+**Use case:** Beginner-friendly microcontroller for simple sensor/actuator interfacing.  
+**Key specifications:**
+- Microcontroller: ATmega328P @ 16 MHz  
+- Digital I/O: 14 pins (6 PWM-capable)  
+- Analog inputs: 6 (A0–A5), 10-bit ADC  
+- Flash / SRAM / EEPROM: 32 KB / 2 KB / 1 KB  
+- Operating voltage: 5V (I/O logic 5V)  
+**Notes:** Requires level shifting when interfacing with 3.3V devices.
+
+### Comparison Summary
+| Parameter | Raspberry Pi 4 | ESP32 | ESP8266 | Arduino Uno |
+|-----------|----------------|-------|---------|-------------|
+| Type | Microprocessor (runs OS) | Microcontroller (SoC) | Microcontroller (SoC) | Microcontroller |
+| Built-in Wi‑Fi | Yes | Yes | Yes | No |
+| Built-in Bluetooth | Yes | Yes | No | No |
+| Logic Voltage | 3.3V | 3.3V | 3.3V | 5V |
+| Usable GPIO | ~26 | ~34 | ~11 | 14 digital + 6 analog |
+| Typical Use | Heavy processing, hosting servers | Wireless sensor nodes | Simple wireless nodes | Simple sensor/actuator interfacing |
+
+---
+
+## Sensors (Common IoT Sensors)
+1. **DHT11 / DHT22** — Digital temperature and humidity sensors using a single-wire timing protocol.  
+2. **Light Sensor (LDR)** — Photoresistor used in a voltage divider and read via analog input.  
+3. **Soil Moisture Sensor** — Two-probe resistance-based sensor producing analog voltage proportional to moisture.  
+4. **Ultrasonic Distance Sensor (HC-SR04)** — Measures distance by timing ultrasonic echo return.  
+5. **Gas Sensor (MQ series)** — Detects gas concentrations by resistance changes when exposed to target gases.
+
+---
+
+## Actuators (Common IoT Actuators)
+1. **LEDs** — Simple indicators; can be dimmed with PWM.  
+2. **Buzzers** — Active or passive for audible alerts.  
+3. **Servo Motors** — Position control via PWM for precise angular movement.  
+4. **DC Motors** — Continuous rotation; require motor drivers (e.g., L298N).  
+5. **Relay Modules** — Electrically isolate and switch high-voltage/high-current loads.
+
+---
+
+## Procedure
+- Studied embedded system architecture relevant to IoT.  
+- Examined datasheets and pinout diagrams for Raspberry Pi, ESP32, ESP8266, and Arduino Uno.  
+- Compared boards by processing power, connectivity, GPIO count, and logic voltage.  
+- Identified common IoT sensors and actuators and their interfacing requirements.  
+- Prepared summarized notes and comparison tables for hardware selection.  
+- Researched real-world IoT projects to understand practical applications and design lessons.
+
+---
+
+## Research Work: 10 IoT Projects (Revised)
+| # | Project Title | Brief Description | Reflection | Resource Link |
+|---|---------------|-------------------|------------|---------------|
+| 1 | Smart Greenhouse Controller | Uses Raspberry Pi + DHT22, soil moisture sensors, and relay-controlled irrigation and ventilation to maintain optimal plant conditions. | Demonstrates closed-loop control and scheduling; highlights sensor fusion and actuator safety. | [Smart Greenhouse Controller ](https://www.scribd.com/document/499625628/SmartGreenhouseSystem)|
+| 2 | Wearable Health Monitor | Uses ESP32 with pulse and accelerometer sensors to track heart rate and activity, sending summaries to a mobile app. | Shows low-power design and secure BLE data transfer; useful for personal health telemetry. | [Wearable Health Monitor](https://www.scribd.com/document/814737986/CBM370-Wearable-Devices) |
+| 3 | LoRa Asset Tracker | Combines GPS module with an ESP32/LoRa node to report location of assets over long range to a LoRaWAN gateway. | Illustrates trade-offs between power, range, and update frequency for remote tracking. |[ LoRa Asset Tracker ](https://www.scribd.com/document/741047059/LoRa-IoT-Asset-Tracking-System)|
+| 4 | Smart Street Lighting | Uses ESP8266 nodes with LDRs and motion sensors to dim or brighten street lights and report energy usage to a central server. | Highlights energy savings and distributed coordination; emphasizes robust OTA update strategies. | [Smart Street Lighting](https://www.scribd.com/document/426116976/Smart-Street-Lighting) |
+| 5 | Predictive Motor Maintenance | Raspberry Pi collects vibration and temperature data from industrial motors; edge ML model predicts bearing failure. | Demonstrates edge analytics and the value of early-warning systems to reduce downtime. |[ Predictive Motor Maintenance](https://www.scribd.com/document/418132849/Electric-Motor-PdM) |
+| 6 | Air Quality Monitoring Network | Network of low-cost ESP32 sensor nodes measuring PM2.5, CO₂, and VOCs, aggregated to a cloud dashboard for city-scale monitoring. | Shows calibration challenges and the importance of data validation for environmental sensing. | [Air Quality Monitoring Network](https://www.scribd.com/presentation/415069448/Air-Quality-Monitoring) |
+| 7 | Smart Irrigation with Weather Integration | ESP32-based soil moisture sensing combined with weather API data to optimize irrigation schedules and conserve water. | Combines local sensing with cloud data; demonstrates API integration and decision logic. | [Smart Irrigation with Weather Integration](https://www.scribd.com/document/718649975/Abstract-Smart-Irrigation-System) |
+| 8 | Wildlife Camera Trap with Edge AI | Raspberry Pi + camera + lightweight object detection model to capture and classify wildlife, uploading images when target species detected. | Useful for conservation; highlights power management and model optimization for edge devices. | [Wildlife Camera Trap with Edge AI](https://www.scribd.com/presentation/861994737/An-Introduction-to-Camera-Trapping-for-Wildlife-Surveys) |
+| 9 | Smart Refrigerator Inventory | ESP32 + weight sensors and RFID tags to track items inside a refrigerator and notify users when supplies run low. | Demonstrates multi-sensor fusion and user-facing notifications; useful for inventory automation. | [Smart Refrigerator Inventory](https://www.scribd.com/presentation/522145308/Smart-Fridge) |
+| 10 | Industrial Vibration Monitoring | ESP32 or Arduino with accelerometer modules streaming vibration spectra to a server for FFT analysis and anomaly detection. | Reinforces signal processing basics and the need for reliable sampling and time synchronization. | [Industrial Vibration Monitoring](https://www.scribd.com/document/226670708/Vibration) |
+
+---
+
+## Output
+- Clear understanding of embedded system architecture in the context of IoT.  
+- Familiarity with features, specifications, and pin configurations of Raspberry Pi, ESP32, ESP8266, and Arduino Uno.  
+- Ability to select the right board for a given IoT task based on connectivity, processing power, and GPIO requirements.  
+- Understanding of common IoT sensors and actuators and how they interface with microcontrollers.  
+- Exposure to 10 real-world IoT projects and the design lessons they offer.
+
+---
+
+## Conclusion
+This lab provided a foundational understanding of embedded systems and the hardware building blocks used throughout IoT development. By comparing Raspberry Pi, ESP32, ESP8266, and Arduino Uno side by side, it became clear that board selection is a trade-off between processing power, wireless connectivity, GPIO availability, and logic voltage compatibility — the "right" board depends on the application requirements. Studying common sensors (DHT11/DHT22, LDR, soil moisture, ultrasonic, gas sensors) and actuators (LEDs, buzzers, servo/DC motors, relays) clarified how physical-world data is captured and acted upon in a typical embedded IoT pipeline. Reviewing ten real-world projects connected theory to practice and highlighted design lessons such as building offline fallbacks, using threshold-based alerts, and matching board complexity to task complexity.
+
+---
