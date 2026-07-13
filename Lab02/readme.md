@@ -1,4 +1,4 @@
-# Experiment 2:Developing and deploying a REST API to store data on cloud
+# Lab 2:Developing and deploying a REST API to store data on cloud
 
 ## 1. Experiment Objectives
 * Provision and set up an Ubuntu-based Amazon AWS EC2 instance.
