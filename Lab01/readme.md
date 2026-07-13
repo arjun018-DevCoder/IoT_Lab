@@ -1,4 +1,4 @@
-# Lab 01: Hosting an IoT Dashboard with Nginx on AWS
+# Lab 01: Hosting a Web Server on the Cloud
 
 ### Objectives
 - Access the AWS Console through the sandbox environment
