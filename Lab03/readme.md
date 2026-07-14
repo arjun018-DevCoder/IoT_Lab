@@ -34,6 +34,10 @@ A dashboard provides an interactive interface where users can monitor sensor rea
 
 Filtering allows users to retrieve data within a selected time period or range, making analysis more efficient.
 
+# System Data Workflow
+<img width="1024" height="559" alt="System_Data_workflow" src="https://github.com/user-attachments/assets/e74363f3-1d86-48ff-ae32-2ebb47b090c6" />
+
+
 ---
 
 # Software Requirements
