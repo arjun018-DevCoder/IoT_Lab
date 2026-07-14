@@ -30,6 +30,10 @@ Embedded systems combine a processor (microcontroller or microprocessor), memory
 - **Resource constraints**: Limited processing power, memory, and power supply.  
 - **Reliability**: Expected to run continuously, often unattended.
 
+# Image
+<img width="481" height="415" alt="embedded system" src="https://github.com/user-attachments/assets/7c963d55-8d1e-4392-85a9-0f21aaaf7493" />
+
+
 Embedded IoT devices typically fall into two categories:
 - **Microcontroller-based boards** (Arduino Uno, ESP32, ESP8266): run a single program in a loop and directly control GPIO pins.  
 - **Microprocessor-based boards** (Raspberry Pi): run a full OS (e.g., Raspberry Pi OS) and can multitask for heavier computation.
@@ -48,6 +52,10 @@ Embedded IoT devices typically fall into two categories:
 - Power: USB Type-C  
 **Notes:** All GPIO pins operate at **3.3V logic**; connecting 5V directly can damage the board.
 
+  # Image
+  <img width="2560" height="1358" alt="Raspberry-Pi-4-Pinout-" src="https://github.com/user-attachments/assets/b2aa627a-1796-4eab-baad-a762816f1e63" />
+
+
 #### B. ESP32
 **Use case:** Wireless sensor nodes with higher processing and I/O needs.  
 **Key specifications:**
@@ -60,6 +68,10 @@ Embedded IoT devices typically fall into two categories:
 - Operating voltage: 3.3V  
 **Notes:** Many peripheral functions can be reassigned to different GPIOs via pin multiplexing.
 
+  # Image
+  <img width="1366" height="780" alt="ESP32-DevKit-V1-Pinout-Diagram" src="https://github.com/user-attachments/assets/9975f2d1-e922-4ddd-ac61-c5bbb66c355f" />
+
+
 #### C. ESP8266 (NodeMCU / ESP-12E)
 **Use case:** Simple, low-cost Wi‑Fi sensor nodes.  
 **Key specifications:**
@@ -71,6 +83,10 @@ Embedded IoT devices typically fall into two categories:
 - Operating voltage: 3.3V  
 **Notes:** Silkscreen labels (D0–D8) differ from raw GPIO numbers; some pins are tied to flash and must not be used.
 
+  # Image
+  <img width="817" height="542" alt="ESP8266-NodeMCU-kit-12-E-pinout-gpio-pin" src="https://github.com/user-attachments/assets/cb53c0e4-37be-4df8-bb7e-d84a3248919f" />
+
+
 #### D. Arduino Uno (R3)
 **Use case:** Beginner-friendly microcontroller for simple sensor/actuator interfacing.  
 **Key specifications:**
@@ -80,6 +96,10 @@ Embedded IoT devices typically fall into two categories:
 - Flash / SRAM / EEPROM: 32 KB / 2 KB / 1 KB  
 - Operating voltage: 5V (I/O logic 5V)  
 **Notes:** Requires level shifting when interfacing with 3.3V devices.
+
+  # Image
+  <img width="1023" height="724" alt="Arduino uno pinout" src="https://github.com/user-attachments/assets/3cecdb31-c732-4887-8745-7e8936d37e71" />
+
 
 ### Comparison Summary
 | Parameter | Raspberry Pi 4 | ESP32 | ESP8266 | Arduino Uno |
@@ -94,10 +114,27 @@ Embedded IoT devices typically fall into two categories:
 ---
 
 ## Sensors (Common IoT Sensors)
-1. **DHT11 / DHT22** — Digital temperature and humidity sensors using a single-wire timing protocol.  
-2. **Light Sensor (LDR)** — Photoresistor used in a voltage divider and read via analog input.  
-3. **Soil Moisture Sensor** — Two-probe resistance-based sensor producing analog voltage proportional to moisture.  
-4. **Ultrasonic Distance Sensor (HC-SR04)** — Measures distance by timing ultrasonic echo return.  
+1. **DHT11 / DHT22** — Digital temperature and humidity sensors using a single-wire timing protocol.
+
+
+<img width="480" height="360" alt="dht11-dht22-" src="https://github.com/user-attachments/assets/7a590740-972c-44cf-927b-906d1533d263" />
+
+
+
+2. **Light Sensor (LDR)** — Photoresistor used in a voltage divider and read via analog input.
+
+<img width="500" height="400" alt="Light Sensor(LDR)" src="https://github.com/user-attachments/assets/b653dcbe-7fe1-45f5-8f47-ff89b8a1176d" />
+
+
+3. **Soil Moisture Sensor** — Two-probe resistance-based sensor producing analog voltage proportional to moisture.
+
+<img width="678" height="452" alt="Soil moisture sensor" src="https://github.com/user-attachments/assets/6239ddfd-692b-4c1c-9e5c-2d7fc54bae61" />
+
+
+4. **Ultrasonic Distance Sensor (HC-SR04)** — Measures distance by timing ultrasonic echo return.
+
+
+
 5. **Gas Sensor (MQ series)** — Detects gas concentrations by resistance changes when exposed to target gases.
 
 ---
