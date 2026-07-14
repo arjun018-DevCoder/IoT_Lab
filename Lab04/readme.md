@@ -16,8 +16,8 @@
 ## Introduction
 An embedded system is a combination of hardware and software designed to perform a specific, dedicated function within a larger system. In IoT, embedded systems form the "brain" of every smart device: a microcontroller or single-board computer receives input from sensors, processes the information according to programmed logic, and produces output through actuators or network communication.
 
-> "Basic Embedded IoT Data Flow: Sensor (Input) → Microcontroller/Microprocessor (Processing) → Actuator / Network (Output)"  
-> "An embedded system combines a processor (microcontroller or microprocessor), memory, input/output interfaces, and firmware to carry out a defined task."
+ "Basic Embedded IoT Data Flow: Sensor (Input) → Microcontroller/Microprocessor (Processing) → Actuator / Network (Output)"  
+ "An embedded system combines a processor (microcontroller or microprocessor), memory, input/output interfaces, and firmware to carry out a defined task."
 
 ---
 
@@ -114,37 +114,60 @@ Embedded IoT devices typically fall into two categories:
 ---
 
 ## Sensors (Common IoT Sensors)
-1. **DHT11 / DHT22** — Digital temperature and humidity sensors using a single-wire timing protocol.
+# **DHT11 / DHT22**
+- Digital temperature and humidity sensors using a single-wire timing protocol.
 
 
 <img width="480" height="360" alt="dht11-dht22-" src="https://github.com/user-attachments/assets/7a590740-972c-44cf-927b-906d1533d263" />
 
 
 
-2. **Light Sensor (LDR)** — Photoresistor used in a voltage divider and read via analog input.
+# **Light Sensor (LDR)**
+- Photoresistor used in a voltage divider and read via analog input.
 
 <img width="500" height="400" alt="Light Sensor(LDR)" src="https://github.com/user-attachments/assets/b653dcbe-7fe1-45f5-8f47-ff89b8a1176d" />
 
 
-3. **Soil Moisture Sensor** — Two-probe resistance-based sensor producing analog voltage proportional to moisture.
+# **Soil Moisture Sensor**
+- Two-probe resistance-based sensor producing analog voltage proportional to moisture.
 
 <img width="678" height="452" alt="Soil moisture sensor" src="https://github.com/user-attachments/assets/6239ddfd-692b-4c1c-9e5c-2d7fc54bae61" />
 
 
-4. **Ultrasonic Distance Sensor (HC-SR04)** — Measures distance by timing ultrasonic echo return.
+# **Ultrasonic Distance Sensor (HC-SR04)**
+- Measures distance by timing ultrasonic echo return.
+
+<img width="447" height="447" alt="Ultrasonic Distance Sensor" src="https://github.com/user-attachments/assets/b1c85638-7f14-4418-aa5a-f9b68fc51c55" />
 
 
 
-5. **Gas Sensor (MQ series)** — Detects gas concentrations by resistance changes when exposed to target gases.
+# **Gas Sensor (MQ series)**
+- Detects gas concentrations by resistance changes when exposed to target gases.
+<img width="617" height="463" alt="gas sensor" src="https://github.com/user-attachments/assets/36595448-1038-4124-a315-261d89504859" />
 
 ---
 
 ## Actuators (Common IoT Actuators)
-1. **LEDs** — Simple indicators; can be dimmed with PWM.  
-2. **Buzzers** — Active or passive for audible alerts.  
-3. **Servo Motors** — Position control via PWM for precise angular movement.  
-4. **DC Motors** — Continuous rotation; require motor drivers (e.g., L298N).  
-5. **Relay Modules** — Electrically isolate and switch high-voltage/high-current loads.
+# **LEDs** 
+- Simple indicators; can be dimmed with PWM.  
+<img width="447" height="447" alt="leds" src="https://github.com/user-attachments/assets/d650101f-0e41-486c-a38a-9dfaf8b7ee9c" />
+
+#  **Buzzers**
+- Active or passive for audible alerts. 
+<img width="700" height="438" alt="Buzzers" src="https://github.com/user-attachments/assets/9dbf7edd-612d-404b-9b69-c84137463df9" />
+
+# **Servo Motors**
+- Position control via PWM for precise angular movement.  
+<img width="1200" height="900" alt="Servo Motor" src="https://github.com/user-attachments/assets/acbd6549-7d20-4225-bb49-b18594469c77" />
+
+# **DC Motors**
+- Continuous rotation; require motor drivers (e.g., L298N).  
+<img width="800" height="800" alt="dc motors" src="https://github.com/user-attachments/assets/df0af567-cc96-4ee8-bd47-cd912f03c375" />
+
+# **Relay Modules**
+- Electrically isolate and switch high-voltage/high-current loads.
+<img width="1200" height="1200" alt="Relay Modules" src="https://github.com/user-attachments/assets/3a7c22ed-a76c-4dcc-9984-e910fe7fb491" />
+
 
 ---
 
@@ -184,6 +207,6 @@ Embedded IoT devices typically fall into two categories:
 ---
 
 ## Conclusion
-This lab provided a foundational understanding of embedded systems and the hardware building blocks used throughout IoT development. By comparing Raspberry Pi, ESP32, ESP8266, and Arduino Uno side by side, it became clear that board selection is a trade-off between processing power, wireless connectivity, GPIO availability, and logic voltage compatibility — the "right" board depends on the application requirements. Studying common sensors (DHT11/DHT22, LDR, soil moisture, ultrasonic, gas sensors) and actuators (LEDs, buzzers, servo/DC motors, relays) clarified how physical-world data is captured and acted upon in a typical embedded IoT pipeline. Reviewing ten real-world projects connected theory to practice and highlighted design lessons such as building offline fallbacks, using threshold-based alerts, and matching board complexity to task complexity.
+- This laboratory experiment established a comprehensive foundation in the hardware architecture driving modern IoT and embedded systems. A comparative analysis of popular boards—namely the Raspberry Pi, ESP32, ESP8266, and Arduino Uno—demonstrated that optimal hardware selection is inherently driven by application-specific demands, requiring a careful balance of processing capabilities, native wireless support, GPIO pin count, and operating voltages. Furthermore, the examination of standard peripheral devices, including various sensors (e.g., DHT11/22, LDR, ultrasonic, gas) and actuators (e.g., relays, servos, buzzers), successfully illustrated the fundamental input-output mechanisms necessary for interacting with the physical world. By bridging these theoretical concepts with the analysis of ten practical use cases, several critical applied system design principles were reinforced, highlighting the necessity of implementing offline redundancies, defining threshold-based triggers, and precisely aligning hardware capabilities with the overall project scope.
 
 ---
